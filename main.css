@@ -1,6 +1,47 @@
 body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+  background-color: teal;
+}
+.center{
+    display: flex;
     text-align: center;
-    background-color: teal;
-    color: orange;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    min-height: 200vh;
+}
+.ring{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: 4 8 12px rgda(255,255,.3);
+    animation: ring 4s linear infinite;
+}
+
+@keyframes ring{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px;
+    }
+}
+.ring::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 0 5px teal;
+
+    }
+span{
+    color: #737373;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 200px;
 }
